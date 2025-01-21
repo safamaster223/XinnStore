@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #F4F9F4; /* Background cerah */
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Animasi masuk header */
+  .Header h1 {
+    font-size: 3rem;
+    text-align: center;
+    animation: slideIn 2s ease-out; /* Animasi slide-in */
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Styling Navigasi */
+  .navigasi {
+    background-color: #006400; /* Hijau gelap */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .navigasi ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  .navigasi a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .navigasi a:hover {
+    color: #FFD700; /* Kuning saat hover */
+  }
+
+  /* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background keren untuk halaman */
+body {
+    background: linear-gradient(to right, #006400, #32CD32); /* Hijau alami */
+    color: #fff;
+}
+
+/* Animasi header */
+.Header h1 {
+    font-size: 3rem;
+    text-align: center;
+    animation: slideIn 2s ease-out; /* Animasi slide-in */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Styling Navigasi */
+.navigasi {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    animation: slideInNav 1s ease-out;
+}
+
+@keyframes slideInNav {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navigasi ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navigasi a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navigasi a:hover {
+    color: #FFD700; /* Kuning saat hover */
+}
+
+/* Styling main content */
+.main {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Animasi masuk untuk konten utama */
+.content h1,
+.content p {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+
+.content h1 {
+    animation-delay: 0.5s;
+}
+
+.content p {
+    animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling search input */
+input[type="search"] {
+    padding: 10px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 300px;
+    transition: all 0.3s ease;
+}
+
+input[type="search"]:focus {
+    outline: none;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Penunjuk pencarian saat hover */
+.search-suggestions ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.search-suggestions ul li {
+    margin: 10px 0;
+}
+
+.search-suggestions ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.search-suggestions ul li a:hover {
+    color: #FFD700; /* Kuning saat hover */
+}
+
+/* Card Styling */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Membuat card sedikit terangkat dan membesar */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #32CD32; /* Hijau cerah */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 12px;
+}
+
+button:hover {
+    background-color: #228B22; /* Hijau lebih gelap saat hover */
+}
+
+
+@media screen and (max-width: 768px) {
+    .navigasi {
+        flex-direction: column; /* Mengubah arah elemen ke bawah */
+        align-items: flex-start; /* Merapikan ke kiri */
+        padding: 20px 10px;
+    }
+
+    .navigasi ul {
+        flex-direction: column; /* Membuat item menjadi kolom */
+        gap: 10px;
+    }
+
+    .navigasi a {
+        font-size: 1.2rem; /* Memperbesar ukuran font agar lebih jelas di mobile */
+    }
+}

@@ -1,0 +1,188 @@
+/* Resetting some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #F4F9F4; /* Background cerah */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Animasi masuk header */
+.Header h1 {
+  font-size: 3rem;
+  text-align: center;
+  animation: slideIn 2s ease-out; /* Animasi slide-in */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Styling Navigasi */
+.navigasi {
+  background-color: #006400; /* Hijau gelap */
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navigasi ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navigasi a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navigasi a:hover {
+  color: #FFD700; /* Kuning saat hover */
+}
+
+/* Styling untuk Cards */
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Zoom in */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.05); /* Zoom gambar saat hover */
+}
+
+/* Tombol */
+button {
+  padding: 10px 20px;
+  background-color: #32CD32; /* Hijau cerah */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 180px;;
+}
+
+button:hover {
+  background-color: #228B22; /* Hijau lebih gelap saat hover */
+}
+button a {
+    text-decoration: none;
+    font-style: none;
+    color:white;
+}
+/* Animasi Scroll */
+@keyframes fadeInOnScroll {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeInOnScroll 1s ease-out forwards;
+}
+
+.card:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+/* Styling untuk Modal Gambar Zoom */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.modal img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.modal img:hover {
+  transform: scale(1.02);
+}
+
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  color: #333;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
