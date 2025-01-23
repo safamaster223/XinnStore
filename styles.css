@@ -186,3 +186,16 @@ button a {
   padding: 10px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .navigasi {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .Header h1 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+}
