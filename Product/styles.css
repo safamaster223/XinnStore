@@ -18,6 +18,11 @@
     animation: slideIn 2s ease-out; /* Animasi slide-in */
   }
   
+.Header p {
+    text-align: center;
+    animation: slideIn 2s ease-in;
+}
+
   @keyframes slideIn {
     from {
       transform: translateY(-100px);
@@ -56,6 +61,29 @@
     transition: color 0.3s ease;
   }
   
+  .card1 {
+    display: flex;
+    flex-direction: column; /* Elemen diatur vertikal */
+    align-items: center; /* Tengahin semua elemen secara horizontal */
+    text-align: center; /* Untuk teks */
+    gap: 10px; /* Jarak antar elemen */
+    margin-top: 30px;
+  }
+
+  
+  .gambar {
+    border-radius: 12px;
+    display: block;
+    width: 450px;
+    height: 250px;
+  }
+
+  .card1 a {
+    text-decoration: none;
+    font-style: none;
+    color:white;
+  }
+
   .navigasi a:hover {
     color: #FFD700; /* Kuning saat hover */
   }
@@ -176,6 +204,7 @@ input[type="search"] {
     transition: all 0.3s ease;
 }
 
+
 input[type="search"]:focus {
     outline: none;
     background-color: #fff;
@@ -218,7 +247,7 @@ input[type="search"]:focus {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 400px;
+    width: 350px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -255,17 +284,42 @@ button:hover {
 
 @media screen and (max-width: 768px) {
     .navigasi {
-        flex-direction: column; /* Mengubah arah elemen ke bawah */
-        align-items: flex-start; /* Merapikan ke kiri */
-        padding: 20px 10px;
+        flex-direction: row; /* Tetap sejajar horizontal */
+        align-items: center; /* Tengah vertikal */
+        justify-content: space-around; /* Rapi, ada jarak */
+        padding: 10px; /* Sesuaikan padding biar pas di layar kecil */
     }
 
+
+
     .navigasi ul {
-        flex-direction: column; /* Membuat item menjadi kolom */
-        gap: 10px;
+        flex-direction: row; /* Tetap horizontal untuk item list */
+        gap: 10px; /* Beri jarak antar elemen */
+        padding: 0; /* Buang padding tambahan */
     }
 
     .navigasi a {
-        font-size: 1.2rem; /* Memperbesar ukuran font agar lebih jelas di mobile */
+        font-size: 12px; /* Ukuran font lebih proporsional */
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column; /* Paksa card ke bawah */
+        text-align: center;
+        align-items: center; /* Tengah vertikal */
+        width: 100%; /* Pastikan card memenuhi lebar layar */
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column; /* Semua card stack vertikal */
+        gap: 20px; /* Beri jarak antar card */
+        align-items: center; /* Tengahkan di layar */
+        justify-content: center;
+    }
+
+    .gambar {
+        width: auto;
     }
 }
+
