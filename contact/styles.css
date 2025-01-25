@@ -11,6 +11,11 @@ body {
     line-height: 1.6;
 }
 
+.logo {
+  display: inline-flex;
+  align-items: center; /* Biar gambar dan teks rata tengah */
+}
+
 /* Animasi masuk header */
 .Header h1 {
     font-size: 3rem;
