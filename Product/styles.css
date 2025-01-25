@@ -16,28 +16,8 @@
     line-height: 1.6;
   }
   
-  /* Animasi masuk header */
-  .Header h1 {
-    font-size: 3rem;
-    text-align: center;
-    animation: slideIn 2s ease-out; /* Animasi slide-in */
-  }
-  
-.Header p {
-    text-align: center;
-    animation: slideIn 2s ease-in;
-}
 
-  @keyframes slideIn {
-    from {
-      transform: translateY(-100px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+
   
   /* Styling Navigasi */
   .navigasi {
